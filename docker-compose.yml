@@ -1,21 +1,16 @@
 version: '3.2'
-services: 
+services:
   back-end:
+    container_name: mean_backend
     build: .
-    volumes: 
+    volumes:
       - .:/backend
-    ports: 
+    ports:
       - 3000:3000
-    networks: 
-      - mean_network
     command: yarn run start
-  
+
   database:
+    container_name: mean_db
     image: mongo
     ports:
       - 27017:27017
-    networks: 
-      - mean_network
-
-networks:
-  mean_network:
