@@ -1,7 +1,6 @@
-const express = require('express')
+const Express = require('express')
 
-
-const app = new express()
+const app = new Express()
 
 app.listen(3000, () => {
   console.log('Server is up and running modafocka!')
